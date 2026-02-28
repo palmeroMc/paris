@@ -13,12 +13,6 @@ body {
   color: #FFFFFF;
 }
 
-header {
-  background-color: #284b63;
-  padding: 40px;
-  text-align: center;
-  border-bottom: 4px solid #3c6e71;
-}
 
 h1 {
   margin: 0;
@@ -62,14 +56,88 @@ a {
   text-decoration: none;
   font-weight: bold;
 }
-</style>
+.header {
+  background-color: #284b63;
+  padding: 40px;
+  text-align: center;
+  border-bottom: 4px solid #3c6e71;
+}
+  header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(53, 53, 53, 0.95);
+  backdrop-filter: blur(6px);
+  padding: 18px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  color: #FFFFFF;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  gap: 28px;
+}
+
+nav a {
+  position: relative;
+  font-size: 14px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background-color: #3c6e71;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+a{
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+  </style>
 </head>
 
 <body>
 
 <header>
-  <h1>Eiffel Tower – Paris</h1>
+  <div class="logo">MC Palmero</div>
+  <nav>
+    <a href="https://palmeromc.github.io/Landing/">Home</a>
+    <a href="https://palmeromc.github.io/bio/">Biography</a>
+    <a href="https://palmeromc.github.io/BLOGG1/">Blogs</a>
+    <a href="https://palmeromc.github.io/PhotoDump/">Gallery</a>
+    <a href="https://palmeromc.github.io/Media-Page/">Medias</a>
+    <a href="https://palmeromc.github.io/DreamPlacesToVisit/">Dream Places</a>
+    <a href="https://palmeromc.github.io/Landing/#bucketlist">Bucket List</a>
+    <a href="https://palmeromc.github.io/Landing/#contacts">Contact</a>
+  </nav>
 </header>
+
+  <br><br><br>
+
+  <h1 class="header">Eiffel Tower – Paris</h1>
+
 
 <section>
   <div class="text-box">
@@ -92,4 +160,5 @@ a {
 
 </body>
 </html>
+
 
